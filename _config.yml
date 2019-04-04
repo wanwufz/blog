@@ -20,7 +20,7 @@ permalink_defaults: #永久链接的默认值
 
 # Directory
 source_dir: source # 公共资源文件夹
-public_dir: public # 生成文件夹，存放生成的站点文件
+public_dir: docs # 生成文件夹，存放生成的站点文件
 tag_dir: tags       # 标签文件夹
 archive_dir: archives # 归档文件夹
 category_dir: categories # 分类文件夹

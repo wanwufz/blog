@@ -7,6 +7,7 @@ date: 2019-04-04 10:22:31
 
 ### 实例
   1. 首先要了解v-model的工作原理，[官网](https://cn.vuejs.org/v2/guide/components-custom-events.html#%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6%E7%9A%84-v-model)解释为默认的prop与input事件，用以避免占用原生表单的value特性。
+  <!-- more -->
   2. 所以关键点就在默认的prop和默认的事件。可以通过以下例子更好的理解
     ```html
     <!-- 父组件里调用 -->
