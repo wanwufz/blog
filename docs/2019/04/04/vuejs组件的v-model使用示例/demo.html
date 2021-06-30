@@ -15,6 +15,13 @@
       width: 90px;
     }
   </style>
+  <script>
+    window.addEventListener("resize", function () {
+      window.setTimeout(function () {
+        document.activeElement.scrollIntoViewIfNeeded()
+      }, 0)
+    })
+  </script>
 </head>
 <body>
   <div>参数:</div>
