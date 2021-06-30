@@ -23,6 +23,62 @@
     <div><span>端口号</span><input id="port" type="number" value="80"></div>
     <div><span>CorpID</span><input id="corpid" type="text"></div>
     <div><span>redirect_uri</span><input id="redirect_uri" type="text"></div>
+    <div><span>CorpID</span><input id="corpid" type="text"></div>
+    <div><span>redirect_uri</span><input id="redirect_uri" type="text"></div>
+    <div><span>CorpID</span><input id="corpid" type="text"></div>
+    <div><span>redirect_uri</span><input id="redirect_uri" type="text"></div>
+    <div><span>CorpID</span><input id="corpid" type="text"></div>
+    <div><span>redirect_uri</span><input id="redirect_uri" type="text"></div>
+    <div><span>CorpID</span><input id="corpid" type="text"></div>
+    <div><span>redirect_uri</span><input id="redirect_uri" type="text"></div>
+    <div><span>CorpID</span><input id="corpid" type="text"></div>
+    <div><span>redirect_uri</span><input id="redirect_uri" type="text"></div>
+    <div><span>CorpID</span><input id="corpid" type="text"></div>
+    <div><span>redirect_uri</span><input id="redirect_uri" type="text"></div>
+    <div><span>CorpID</span><input id="corpid" type="text"></div>
+    <div><span>redirect_uri</span><input id="redirect_uri" type="text"></div>
+    <div><span>CorpID</span><input id="corpid" type="text"></div>
+    <div><span>redirect_uri</span><input id="redirect_uri" type="text"></div>
+    <div><span>CorpID</span><input id="corpid" type="text"></div>
+    <div><span>redirect_uri</span><input id="redirect_uri" type="text"></div>
+    <div><span>CorpID</span><input id="corpid" type="text"></div>
+    <div><span>redirect_uri</span><input id="redirect_uri" type="text"></div>
+    <div><span>CorpID</span><input id="corpid" type="text"></div>
+    <div><span>redirect_uri</span><input id="redirect_uri" type="text"></div>
+    <div><span>CorpID</span><input id="corpid" type="text"></div>
+    <div><span>redirect_uri</span><input id="redirect_uri" type="text"></div>
+    <div><span>CorpID</span><input id="corpid" type="text"></div>
+    <div><span>redirect_uri</span><input id="redirect_uri" type="text"></div>
+    <div><span>CorpID</span><input id="corpid" type="text"></div>
+    <div><span>redirect_uri</span><input id="redirect_uri" type="text"></div>
+    <div><span>CorpID</span><input id="corpid" type="text"></div>
+    <div><span>redirect_uri</span><input id="redirect_uri" type="text"></div>
+    <div><span>CorpID</span><input id="corpid" type="text"></div>
+    <div><span>redirect_uri</span><input id="redirect_uri" type="text"></div>
+    <div><span>CorpID</span><input id="corpid" type="text"></div>
+    <div><span>redirect_uri</span><input id="redirect_uri" type="text"></div>
+    <div><span>CorpID</span><input id="corpid" type="text"></div>
+    <div><span>redirect_uri</span><input id="redirect_uri" type="text"></div>
+    <div><span>CorpID</span><input id="corpid" type="text"></div>
+    <div><span>redirect_uri</span><input id="redirect_uri" type="text"></div>
+    <div><span>CorpID</span><input id="corpid" type="text"></div>
+    <div><span>redirect_uri</span><input id="redirect_uri" type="text"></div>
+    <div><span>CorpID</span><input id="corpid" type="text"></div>
+    <div><span>redirect_uri</span><input id="redirect_uri" type="text"></div>
+    <div><span>CorpID</span><input id="corpid" type="text"></div>
+    <div><span>redirect_uri</span><input id="redirect_uri" type="text"></div>
+    <div><span>CorpID</span><input id="corpid" type="text"></div>
+    <div><span>redirect_uri</span><input id="redirect_uri" type="text"></div>
+    <div><span>CorpID</span><input id="corpid" type="text"></div>
+    <div><span>redirect_uri</span><input id="redirect_uri" type="text"></div>
+    <div><span>CorpID</span><input id="corpid" type="text"></div>
+    <div><span>redirect_uri</span><input id="redirect_uri" type="text"></div>
+    <div><span>CorpID</span><input id="corpid" type="text"></div>
+    <div><span>redirect_uri</span><input id="redirect_uri" type="text"></div>
+    <div><span>CorpID</span><input id="corpid" type="text"></div>
+    <div><span>redirect_uri</span><input id="redirect_uri" type="text"></div>
+    <div><span>CorpID</span><input id="corpid" type="text"></div>
+    <div><span>redirect_uri</span><input id="redirect_uri" type="text"></div>
     <div><span>scope</span><select id="scope">
       <option value ="snsapi_base">静默授权</option>
       <option value ="snsapi_userinfo">获取成员基础信息</option>
@@ -30,27 +86,29 @@
     <div><span>企业应用ID</span><input id="agentid" type="text"></div>
     <div><span>自定义数据</span><input id="state" type="text"></div>
     <button onclick="send()">请求数据</button>
-    <input type="file">
+    <div style="width: 100%;height: 600px;" contenteditable="true"></div>
+    <input id="file" accept="audio/mpeg, audio/x-wav, audio/mp4a-latm, audio/x-ms-wma, audio/amr" type="file">
   </div>
   <div>当前url参数: <span style="display: inline;" id="end"></span>  </div>
   <script>
     document.querySelector('#end').innerHTML = window.location.search
     function send() {
+      document.querySelector('#file').click()
       // urlencode
-      var ip = document.querySelector('#ip').value
-      var port = document.querySelector('#port').value
-      var corpid = document.querySelector('#corpid').value
-      var redirect_uri = document.querySelector('#redirect_uri').value
-      redirect_uri = encodeURIComponent(redirect_uri)
-      var scope = document.querySelector('#scope').value
-      var agentid = document.querySelector('#agentid').value
-      var state = document.querySelector('#state').value
-      var url = [
-        'http://', ip, ':', port, '/connect/oauth2/authorize?appid=',
-        corpid, '&redirect_uri=', redirect_uri, '&response_type=code&scope=',
-        scope, '&agentid=', agentid, '&state=', state, '#wechat_redirect'
-      ].join('')
-      window.location.href = url
+      // var ip = document.querySelector('#ip').value
+      // var port = document.querySelector('#port').value
+      // var corpid = document.querySelector('#corpid').value
+      // var redirect_uri = document.querySelector('#redirect_uri').value
+      // redirect_uri = encodeURIComponent(redirect_uri)
+      // var scope = document.querySelector('#scope').value
+      // var agentid = document.querySelector('#agentid').value
+      // var state = document.querySelector('#state').value
+      // var url = [
+      //   'http://', ip, ':', port, '/connect/oauth2/authorize?appid=',
+      //   corpid, '&redirect_uri=', redirect_uri, '&response_type=code&scope=',
+      //   scope, '&agentid=', agentid, '&state=', state, '#wechat_redirect'
+      // ].join('')
+      // window.location.href = url
     }
   </script>
 </body>
